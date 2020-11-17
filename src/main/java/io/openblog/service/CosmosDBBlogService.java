@@ -2,11 +2,20 @@ package io.openblog.service;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import io.openblog.model.BlogPost;
+
 
 public class CosmosDBBlogService implements IBlogService {
 
+    @Autowired
     private BlogPostRepository blogRepository = null;
+
+    public CosmosDBBlogService() {
+
+    }
 
     public CosmosDBBlogService(BlogPostRepository blogRepository) {
 
